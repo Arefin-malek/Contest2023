@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+#define ll long long
 void solve(int a)
 {
     int mango =0, apple=0 , orange=0 , lemon=0, coco=0;
