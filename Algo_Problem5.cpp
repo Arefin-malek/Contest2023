@@ -3,12 +3,12 @@ using namespace std;
 #define ll long long
 void solve(int a)
 {
-    int mango =0, apple=0 , orange=0 , lemon=0, coco=0;
-    int num ,days;
+    ll mango =0, apple=0 , orange=0 , lemon=0, coco=0;
+    ll num ,days;
     cin>>num>>days;
 
     mango = 27500;
-    int temp = days/15;
+    ll temp = days/15;
     mango = mango * temp;
 
     apple = 12000;
@@ -27,24 +27,24 @@ void solve(int a)
     temp = days/15;
     coco = coco* temp;
 
-    int maxterm = 0.4*num;
+    ll maxterm = 0.4*num;
     maxterm--;
-    vector<int> fruits;
+    vector<ll> fruits;
     fruits.push_back(mango);
     fruits.push_back(orange);
     fruits.push_back(lemon);
     fruits.push_back(apple);
     fruits.push_back(coco);
 
-    int sum = 0;
+    ll sum = 0;
     sort(fruits.begin(),fruits.end(),greater<int>());
-    int n = fruits.size();
+    ll n = fruits.size();
     
     for(int i=0 ;i<n; i++ ) 
     {
         sum +=fruits[i];
     }
-    int tempnumber = num - n;
+    ll tempnumber = num - n;
     for(int i=0 ; i<n; i++)
     {
         if(maxterm < tempnumber) 
