@@ -1,17 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int main() {
+void solve(int T) {
 	vector<char> operators = {'+', '-', '*', '/', '='};
+	string str;
+	vector<string> streq;
 	vector<string> AlphaNum = {"plus", "substract", "multiple", "division", "equals"};
+	
+	
 	vector<string> Num = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "30", "40", "50", "60", "70", "80", "90", "100"};
 	vector<string> AlphaNumS = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninty", "hundred" } ;
-
-	int t;
-	cin >> t;
-	for (int T = 1; T <= t; T++) {
-		string str;
-		vector<string> streq;
+	
 		while (true) {
 			cin >> str;
 			if (str == "and" || str == " ") continue;
@@ -75,5 +74,17 @@ int main() {
 		RHS = (Isneg ? -previous : previous);
         cout << "Case #" << T << ": ";
 		cout << (LHS == RHS ? "True" : "False") << endl;
-	}
+}
+
+
+int main()
+{
+    int t;
+    cin>>t;
+    int a =1;
+    while(t--){
+
+        solve(a);
+        a++;
+    }
 }
